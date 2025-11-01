@@ -46,6 +46,14 @@ tr {
 
 td {
   padding: 5px;
+  vertical-align: middle;
+}
+
+td img,
+td span,
+td svg {
+  height: 20px;
+  vertical-align: middle;
 }
 
 nav {
