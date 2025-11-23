@@ -1,0 +1,35 @@
+nav > ul > li > a.active {
+  background-color: #2c5e77;
+  font-weight: bold;
+}
+
+td.bmi-normal {
+  font-weight: bold;
+  color: black;
+  background-color: #00FF00FF;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+
+td.bmi-overweight {
+  font-weight: bold;
+  color: black;
+  background-color: #FF00007F;
+  cursor: pointer;
+  transition: box-shadow 75ms ease-in-out;
+}
+
+td.bmi-normal:hover, td.bmi-overweight:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+  transform: scale(1.02);
+}
+
+#result {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: #e4f0f5;
+  padding: 15px;
+  border-radius: 5px;
+}
