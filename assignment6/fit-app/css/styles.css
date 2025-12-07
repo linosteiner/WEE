@@ -1,0 +1,42 @@
+.table-success, .table-warning {
+  transition: transform 150ms ease-in-out;
+  cursor: default;
+}
+
+.table-success:hover, .table-warning:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  z-index: 10;
+  position: relative;
+}
+
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #2c5e77;
+  border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 5px;
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .navbar-dark .navbar-nav .nav-link.active {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
