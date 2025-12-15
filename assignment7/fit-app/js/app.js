@@ -321,7 +321,7 @@ function renderMeasurements(container) {
         <form id="measurement-form">
             <div class="row">
                 <div class="col-md-3 mb-3">
-                    <input type="text" id="m-user" class="form-control" placeholder="User (z.B. Felix)" required>
+                    <input type="text" id="m-person" class="form-control" placeholder="User (z.B. Felix)" required>
                 </div>
                 <div class="col-md-3 mb-3">
                     <input type="date" id="m-date" class="form-control" required>
@@ -362,7 +362,7 @@ function renderMeasurements(container) {
   document.getElementById('measurement-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const data = {
-      user: document.getElementById('m-user').value,
+      person: document.getElementById('m-person').value,
       date: document.getElementById('m-date').value,
       height: parseFloat(document.getElementById('m-height').value),
       weight: parseFloat(document.getElementById('m-weight').value)
@@ -393,8 +393,8 @@ function loadMeasurements() {
         const bmi = (m.weight / Math.pow(m.height / 100, 2)).toFixed(1);
         const tr = document.createElement('tr');
         tr.innerHTML = `
-                <td>${m.date}</td>
-                <td>${m.user}</td>
+                <td>${formatDate(m.date)}</td>
+                <td>${m.person}</td>
                 <td>${m.height}</td>
                 <td>${m.weight}</td>
                 <td><strong>${bmi}</strong></td>
